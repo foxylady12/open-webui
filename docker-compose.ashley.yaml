@@ -10,6 +10,8 @@ services:
       # No Ollama needed - we use Claude API via Pipe function
       - OLLAMA_BASE_URL=
       - WEBUI_SECRET_KEY=equity-research-2024
+      # Use PostgreSQL instead of SQLite for all Open WebUI data
+      - DATABASE_URL=postgresql://doc_admin:Sw116dsSw116ds!@host.docker.internal:5432/open_webui
       # Disable telemetry
       - SCARF_NO_ANALYTICS=true
       - DO_NOT_TRACK=true
